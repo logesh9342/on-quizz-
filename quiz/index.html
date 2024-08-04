@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="navbar" id="navbar">
+        <div class="navbar-left">
+            <h1 class="interactive-quiz-title">Interactive Quiz</h1>
+        </div>
+        <div class="navbar-right">
+            <ul>
+                <li><a href="#" onclick="showHomePage()">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container" id="home-page">
+        <div class="home-title">
+            <h1>Learn Quiz</h1>
+        </div>
+        <div id="quiz-list">
+            <h2>Available Quizzes</h2>
+            <ul>
+                <li>
+                    <a href="#" onclick="loadQuiz('quiz1')">Quiz 1: General Knowledge</a>
+                </li>
+                <li>
+                    <a href="#" onclick="loadQuiz('quiz2')">Quiz 2: Science</a>
+                </li>
+                <li>
+                    <a href="#" onclick="loadQuiz('quiz3')">Quiz 3: History</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="container" id="quiz-container" style="display: none;">
+        <h2 id="quiz-title"></h2>
+        <div id="questions-container"></div>
+        <button onclick="submitQuiz()">Submit</button>
+        <div id="result" style="display: none;"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
